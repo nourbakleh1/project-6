@@ -49,6 +49,12 @@ html{
     animation: go_up 1s infinite normal ease;
 
 }
+@media (max-width:767px) {
+    
+    .go-up.active{
+        top:600px !important;
+    }
+}
 .go-up.active{
     top:800px;
 }
