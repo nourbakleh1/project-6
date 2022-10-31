@@ -524,6 +524,14 @@ header .mega-menu .links li a i{
     overflow: hidden;
     transition: transform var(--transition-duration) , box-shadow var(--transition-duration);
 }
+.articles .box.box-scale{
+   transform: scale(0) rotate(180deg);
+    transition: 1s;
+}
+.articles .box.box-scale.active{
+    transform: scale(1) rotate(0deg);
+}
+
 .articles .box:hover{
     transform: translateY(-10px);
     -webkit-transform: translateY(-10px);
@@ -591,6 +599,19 @@ header .mega-menu .links li a i{
     0 2px  4px 0 rgb(0 0 0 /12%);
 
 }
+.gallery .box.box-opacity{
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(-100deg) scale(0.5) ;
+    transition: 2s;
+    
+}
+.gallery .box.box-opacity.show{
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(0deg) scale(1);
+
+}
 .gallery .box .image{
     position: relative;
     overflow: hidden;
@@ -642,6 +663,7 @@ header .mega-menu .links li a i{
     padding: var(--padding-top-bottom);
     position: relative;
     background-color: #fff;
+    overflow: hidden;
 }
 .features .container{
     display: grid;
@@ -652,10 +674,24 @@ header .mega-menu .links li a i{
     text-align: center;
     border: 1px solid #ccc;
 }
+.features .box.left{
+    transform:translate(900px);
+    transition: 1s;
+}
+.features .box.right{
+    transform:translate(-900px) scale(0);
+    transition: 1s;
+}
+.features .box.right.active,
+.features .box.left.active{
+    transform:translate(0px) scale(1);
+
+}
 .features  .box .img-holder{
     position: relative;
     overflow: hidden;
 }
+
 .features  .box .img-holder::before{
     content: "";
     position: absolute;
@@ -790,7 +826,6 @@ header .mega-menu .links li a i{
     padding: var(--padding-top-bottom);
     position: relative;
     background-color: var(--secound--color);
-    
 }
 
 .testimonials .container{
@@ -805,8 +840,16 @@ header .mega-menu .links li a i{
     box-shadow: 0 2px 4px rgb( 0 0 0/ 7%);
     border-radius: 6px;
     position: relative;
-}
 
+}
+.testimonials .box.box-fillter{
+    filter:  blur(5px);
+    transition: 1s;
+}
+.testimonials .box.box-fillter.handle{
+    filter:  blur(0px);
+
+}
 .testimonials .box img{
     position: absolute;
     right: -10px;
@@ -887,7 +930,13 @@ header .mega-menu .links li a i{
 }
 .team .box .data img{
     max-width: calc(100% - 60px);
-    transition: var(--transition-duration);
+    border-radius: 50%;
+    transform: rotate(20deg);
+    transition: 2s;
+
+}
+.team .box .data img.active{
+    transform: rotate(0deg);
     border-radius: 10px;
 
 }
@@ -1085,7 +1134,8 @@ header .mega-menu .links li a i{
     top:0;
     height: 100%;
     background-color: #EEE;
-    
+
+
     
 }
 .our-skills .skill .the-progress span .fill{
@@ -1094,9 +1144,13 @@ header .mega-menu .links li a i{
     top:0;
     left:0;
     height: 100%;
-    width:100%;
     background-color: var(--main-color);
-    transition: 2s;
+    transition:width 2s;
+    width: 0;
+
+}
+.our-skills .skill .the-progress span .fill.ok{
+    width:100%;
 }
 
 /*end skills */
@@ -1879,4 +1933,5 @@ footer .copyright span{
     bottom: 200px;
     left: 0;
 }
+
 /*end dots */
