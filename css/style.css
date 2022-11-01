@@ -107,13 +107,13 @@ html{
 @media (max-width:767px) {
     
     .go-up.active{
-        top:700px !important ;
+        top:800px !important ;
     }
 }
 @media (max-width:575px) {
     
     .go-up.active{
-        top:620px !important;
+        top:650px !important;
     }
 }
 @media (max-width:450px) {
