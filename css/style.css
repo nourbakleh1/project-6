@@ -104,22 +104,22 @@ html{
 .go-up.active{
     top:800px;
 }
-@media (max-width:767px) {
+@media (max-height:992px) {
     
     .go-up.active{
-        top:800px !important ;
+        top:730px;
     }
 }
-@media (max-width:575px) {
+@media (max-height:767px) {
     
     .go-up.active{
-        top:650px !important;
+        top:600px;
     }
 }
-@media (max-width:450px) {
+@media (max-height:575px) {
     
     .go-up.active{
-        top:550px !important;
+        top:450px;
     }
 }
 .go-up:hover{
@@ -130,7 +130,7 @@ html{
         margin-top: 0px;
     }
     40%,60%{
-        margin-top: -5px;
+        margin-top: -3px;
 
     }
 }
