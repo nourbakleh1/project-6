@@ -121,6 +121,12 @@ html{
     .go-up.active{
         top:450px;
     }
+} 
+@media (max-height:380px) {
+    
+    .go-up.active{
+        top:300px;
+    }
 }
 .go-up:hover{
     background-color: var(--min-color-alt);
